@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+   <style>
+      .dark {
+         background-color: #171823;
+         color: #FFFFFF;
+      }
+      
+      .dark div[type="text"] {
+         background-color: #25273D;
+         color: #D1D5DB;
+      }
+      .dark input[type="text"] {
+         background-color: #25273D;
+         color: #D1D5DB;
+      }
+   </style>
+</head>
+<body class="h-full flex flex-col items-center justify-center text-white   bg-[url(../img/bg.png)] bg-no-repeat bg-[length:100%_300px]  leading-10 font-['Josefin_Sans']">
+      <div class=" mt-[70px]">
+         <div class=" flex justify-between w-[540px]  mb-12">
+            <h1 class=" tracking-[15px] text-[40px]">TODO</h1>
+            <img id="mode" class="cursor-pointer" src="./img/moons.svg" alt="Switch to dark mode">
+         </div>
+      </div>
+      <section id="input">
+         <div type="text" class=" w-[540px] h-16 rounded-[5px] bg-white px-6 mb-6 ">
+            <input type="text"  autofocus  placeholder="Create a new todo..." class="text-xl text-black p-2 pt-4 outline-0 ">
+         </div>
+      </section>
+      
+      <section id="todos" class="text-[#494c6b] overflow-hidden rounded-md shadow-md">
+         <div  type="text" class="bg-white  w-[540px] h-16 rounded-[5px]  px-6">
+            <h3  class="text-lg pt-4 select-none ">Jog around the park 3x</h3>
+            
+         </div>
+      </section>
+
+      <section id="footer" class=" flex justify-between w-[540px]  text-[14px] px-3">
+      <h3 id="push_value" class=" text-gray-500"></h3>
+      <div class=" flex gap-5 ">
+         <span class=" text-blue-600 cursor-pointer">All</span>
+         <span id="active" class=" text-gray-500 cursor-pointer">Active</span>
+         <span onclick="updateUI()" id="completed" class=" text-gray-500 cursor-pointer">Completed</span>
+      </div>
+      <h3 id="clear" class=" cursor-pointer text-gray-500">Clear Completed</h3>
+      </section>
+   <script src="./app.js"></script>
+</body>
+</html>
+
